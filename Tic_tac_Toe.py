@@ -42,10 +42,5 @@ def pc():
     if pc == player_move:
         print("Sorry no winners! It was a draw!")
 
-
-
-    
-    
-
-
+user()
 pc()
