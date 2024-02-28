@@ -7,8 +7,17 @@ rock = 1
 paper = 2
 scissors = 3
 
-
+# global variable player_move
 player_move = input("Please choose one of the following: {rock = 1, paper = 2, scissor = 3} ")
+
+def user():
+    play = input("Would you like to play Rock, Paper, Scissors?")
+    if play == "yes" or "Yes" or "y":
+        while play == "yes" or "Yes":
+            player_move = input("Please choose one of the following: {rock = 1, paper = 2, scissor = 3} ")
+            return(player_move)
+    elif play == "no" or "n" or "No":
+        quit
 
 def pc():
     roll = random.randint(1,3)
