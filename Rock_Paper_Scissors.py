@@ -1,4 +1,4 @@
-# RPS game first
+# RPS game first, then modified to become Tic-Tac-Toe
 # Amanda M
 # 2/28/2024
 
