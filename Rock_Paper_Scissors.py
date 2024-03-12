@@ -1,4 +1,4 @@
-# RPS game first, then modified to become Tic-Tac-Toe
+# RPS game
 # Amanda M
 # 2/28/2024
 
@@ -9,6 +9,12 @@ scissors = 3
 
 # global variable player_move
 player_move = input("Please choose one of the following: {rock = 1, paper = 2, scissor = 3} ")
+def vaild():
+    if player_move != ["rock", "paper", "scissor", "1", "2", "3"]:
+        player_move
+    elif player_move != ["rock", "paper", "scissor", "1", "2", "3"]:
+        print('Please input a valid term.')
+        player_move
 
 def pc():
     roll = random.randint(1,3)
@@ -24,22 +30,19 @@ def pc():
     if pc == player_move:
         print("Sorry no winners! It was a draw!")
 
+
 def result(sum):
-    if player_move == {2} or "paper" and pc == {1}:
-            print(f'{player_move} wins. Paper covers rock.')
-    if pc == {1} or "rock" and player_move == {3}:
-            print('The computer  wins. Rock smashes scissors.')
-            
-    if player_move == {3} or "scissors" and pc == {2}:
-            print(f'{player_move} wins. Scissors cut paper.')
-    if pc == {2} or "paper" and player_move == {1}:
-            print('The computer wins. Paper covers rock.')
-
-    if player_move == {1} or "rock" and pc == {3}:
-            print(f'{player_move} wins. Rock smashes scissors.')
-    if pc == {3} or "scissors" and player_move == {2}:
-            print('The computer wins. Scissors cut paper.')
-
+    if (player_move == {2} or "paper" and pc == {1}) or (pc == {1} or "rock" and player_move == {3}) or (player_move == {1} or "rock" and pc == {3}):
+            print('The computer  wins.')
+    else:
+          print(f'Player wins!')        
+    choice = input("Play again? Yes or No ")
+    while choice != ["yes"]:
+         print("Please enter a correct value. ")
+         player_move
+    if choice == ["yes", "Yes", "y"]:
+                player_move
+                
 
 sum = pc()
 result(sum)
